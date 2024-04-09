@@ -14,9 +14,25 @@
 using namespace std;
 ld a[nmax],b,c,m,n,d,t;
 
+void toUpper(string *s)
+{
+    for(int i=0;i<(*s).size();i++)
+    {
+        if((*s)[i]>='a' && (*s)[i] <= 'z')
+        {
+            (*s)[i]-=32;
+        }
+    }
+}
+// note : truyền tham chiếu là string &s (địa chỉ) và thao tác với só bình thường
+//truyền tham trị là string *s thao tác vào giá trị trong địa chỉ của biến
 void fatcat()
 {
     //cout << "meowlo world";
+    string s;
+    cin >> s;
+    toUpper(&s);
+    cout << s;
 }
 
 int main()
