@@ -1,0 +1,19 @@
+s=str(input())
+def check(s):
+    res="No"
+    if len(s) != 11:
+        return res
+    else:
+        cnt=0
+        if s[:2].isdigit()==True and s[4:8].isdigit()==True and s[9:].isdigit()==True:
+            cnt+=1
+        if s[2] == '-':
+            cnt+=1
+        if s[8]=='.':
+            cnt+=1
+        if s[3].isalpha()==True and s[3] == s[3].upper():
+            cnt+=1
+        if cnt==4:
+            res="Yes"
+        return res
+print(check(s))
